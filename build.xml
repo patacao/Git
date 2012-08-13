@@ -16,7 +16,7 @@
 	<target name="cucumber" description="Run the cucumber tests">
      <property environment="env" />
      <exec executable="cucumber" >
-       <env key="PATH" path="C:\Ruby193\bin" />
+       <env key="PATH" path="${env.PATH}" />
        <env key="CLASSPATH" file="${jruby.home}/lib/jruby.jar" />
      </exec>
    </target>

@@ -28,7 +28,7 @@
    
   
    <target name="help">
-		<exec dir="C:\Ruby193\bin" executable="cmd">
+		<exec dir="${dir}" executable="cmd">
 			<arg value="/c"/>
 			<arg value="cucumber"/>
 			<arg value="--tags"/>

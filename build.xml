@@ -5,7 +5,7 @@
   <!-- set global properties for this build -->
   <property name="src" location="src"/>
   <property name="build" location="build"/>
-  <property name="cucumber" location="C:/Ruby193/bin/cucumber"/>
+  <property name="cucumber" location="C:/Ruby193/bin/cucumber.bat"/>
 
   
   <target name="init">

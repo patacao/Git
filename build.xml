@@ -30,7 +30,7 @@
    <target name="help">
 		<exec executable="cmd">
 			<arg value="/c"/>
-			<arg value="cucumber.bat"/>
+			<arg value="cucumber"/>
 			<arg value="--tags"/>
 			<arg value="@navigate"/>
 		</exec>

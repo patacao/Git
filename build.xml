@@ -17,7 +17,7 @@
 
 	<target name="cucumber" description="Run the cucumber tests">
      <property environment="env" />
-     <exec executable="${cucumber}" >
+     <exec executable="${cucumber} --tags @navigate" >
        <!-- <env key="PATH" path="${env.PATH}" /> -->
        <env key="CLASSPATH" file="${jruby.home}/lib/jruby.jar" />
      </exec>

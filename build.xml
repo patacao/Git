@@ -25,6 +25,16 @@
      </exec>
 
    </target>
+   
+    <target name="cucumber2" description="Run the cucumber tests">
+     <property environment="env" />
+     <exec executable="cucumber" >
+		<arg value="--tags"/>
+		<arg value="@navigate"/>
+       <env key="PATH" path="${env.PATH}" />
+       <env key="CLASSPATH" file="${jruby.home}/lib/jruby.jar" />
+     </exec>
+   </target>
 
   <target name="clean"
         description="clean up" >

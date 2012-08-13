@@ -5,7 +5,7 @@
   <!-- set global properties for this build -->
   <property name="src" location="src"/>
   <property name="build" location="build"/>
-  <property name="cucumber" location="C:/Ruby193/bin/cucumber.bat"/>
+  <property name="cucumber" location="C:/Ruby193/bin/cucumber"/>
 
   
   <target name="init">
@@ -18,10 +18,12 @@
 	<target name="cucumber" description="Run the cucumber tests">
      <property environment="env" />
      <exec executable="${cucumber}" >
+		<arg value="--tags"/>
+		<arg value="@navigate"/>
        <!-- <env key="PATH" path="${env.PATH}" /> -->
        <env key="CLASSPATH" file="${jruby.home}/lib/jruby.jar" />
      </exec>
-	 <cucumber args="--tags @navigate">
+
    </target>
 
   <target name="clean"

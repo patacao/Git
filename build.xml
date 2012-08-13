@@ -14,14 +14,13 @@
     <mkdir dir="${build}"/>
   </target>
 
-  <target name="dist" depends="compile"
-        description="generate the distribution" >
-    <!-- Create the distribution directory -->
-    <mkdir dir="${dist}/lib"/>
-
-    <!-- Put everything in ${build} into the MyProject-${DSTAMP}.jar file -->
-    <jar jarfile="${dist}/lib/MyProject-${DSTAMP}.jar" basedir="${build}"/>
-  </target>
+	<target name="cucumber" description="Run the cucumber tests">
+     <property environment="env" />
+     <exec executable="cucumber" >
+       <env key="PATH" path="${env.PATH}:${jruby.home}/bin" />
+       <env key="CLASSPATH" file="${jruby.home}/lib/jruby.jar" />
+     </exec>
+   </target>
 
   <target name="clean"
         description="clean up" >

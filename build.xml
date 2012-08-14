@@ -15,24 +15,15 @@
     <mkdir dir="${build}"/>
   </target>
 
-	<target name="cucumber" description="Run the cucumber tests">
-     <property environment="env" />
-     <exec dir="${C:\Ruby193\bin}" executable="cucumber">
-		<arg value="--tags"/>
-		<arg value="@navigate"/>
-       <!-- <env key="PATH" path="${env.PATH}" /> -->
-       <!-- <env key="CLASSPATH" file="${jruby.home}/lib/jruby.jar" /> -->
-     </exec>
-
-   </target>
-   
-  
-   <target name="help">
+   <target name="Cucumber">
+	<property environment="env" />
 		<exec dir="C:\Ruby193\bin" executable="cmd">
 			<arg value="/c"/>
 			<arg value="cucumber"/>
 			<arg value="--tags"/>
 			<arg value="@navigate"/>
+		<env key="PATH" path="${env.PATH}" />
+        <env key="CLASSPATH" file="${jruby.home}/lib/jruby.jar" />
 		</exec>
 	</target>
 
